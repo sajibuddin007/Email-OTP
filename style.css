@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;margin: 0;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(241, 245, 204);
+}
+:root{
+    --box-shadow:5px 5px 7px rgb(67, 25, 114), -5px -5px 7px rgb(182,141,228);
+    --inset-box-shadow:inset 5px 5px 7px rgb(67,25,114),inset -5px -5px 7px rgb(182,141,228);
+    --main-color:rgb(150,72,240);
+    --font-color:white;
+}
+::placeholder{
+    color: var(--font-color);
+}
+section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(146,64,240);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 10px;
+    border-radius: 20px;
+    background-color: var(--inset-box-shadow);
+    box-shadow: var(--inset-box-shadow);
+}
+h1{
+    color: var(--font-color);
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.email-verify{
+    display: none;
+    margin: 5px 0;
+    gap: 10px;
+}
+.email input {
+    width: 350px;
+}
+.email-verify input{
+    flex: 8;
+}
+.email-verify #btn-verify-otp{
+    flex: 4;
+    margin-left: 10px;
+}
+.btn-send-otp{
+    padding: 7px;
+    margin: 10px 0;
+}
+input{
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: .3px;
+    color: var(--font-color);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    box-shadow: var(--box-shadow);
+    
+}
+button{
+    font-weight: bold;
+    color: var(--font-color);
+    background-color: var(--main-color);
+    border: none;
+    font-size: 1.4rem;
+    transition: all .3s;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+}
+@media screen and (max-width: 600px) {
+    .container{
+        padding: 20px;
+        gap: 10px;
+        border-radius: 10px;
+        width: 490px;
+    }
+    h1{
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .email input {
+        padding: 8px;
+        margin-left: 19px;
+        width: 360px;
+    }
+
+    .email-verify{
+        margin: 0 15px;
+    }
+    .email-verify input{
+        flex: 8;
+    }
+    #btn-verify-otp{
+        margin-left: 5px;
+    }
+    .btn-send-otp{
+        padding: 8px;
+        margin-left: 19px;
+        width: 370px;
+    }
+}
